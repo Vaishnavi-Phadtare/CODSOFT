@@ -1,0 +1,24 @@
+#Task3
+#Password Generator
+# importing the random module
+import random
+
+# a function that will generate a password on length (n) and return it.
+def generatePassword(n):
+
+    characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789!@#$%^&*()"
+    password = ""
+
+    for i in range(n):
+        # randomly selecting one character and appending it to the resultant password string
+        password += random.choice(characters)
+
+    # finally returning the randomly generated password.
+    return password
+
+
+if __name__ == "__main__":
+    user_name=(input("Enter the User Name:"))
+    n = int(input("Enter length Of Password:"))
+    password = generatePassword(n)
+    print("Generated Password is:", password)
